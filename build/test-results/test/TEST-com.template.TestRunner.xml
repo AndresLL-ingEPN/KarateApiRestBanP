@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.template.TestRunner" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-03-18T06:32:54" hostname="NTTD-D4LB2J3" time="64.631">
+  <properties/>
+  <testcase name="testRunner" classname="com.template.TestRunner" time="64.631"/>
+  <system-out><![CDATA[01:32:56 WARN  c.i.karate.Suite - failed to backup existing dir: build\karate-reports
+01:33:01 INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:com/template/features/petstore/helpers/addPet.feature')
+01:33:03 INFO  com.intuit.karate - [print] Helper addPet - Mascota creada con ID: 977303226 
+01:33:03 INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:com/template/features/petstore/helpers/addPet.feature')
+01:33:03 INFO  com.intuit.karate - [print] CA1 ✔ | POST /pet | ID: 977303226 | Nombre: Firulais | Estatus: available 
+01:33:03 INFO  com.intuit.karate - [print] CA2 ✔ | GET /pet/{id} | ID: 977303226 | Nombre: Firulais | Estatus: available 
+01:33:04 INFO  com.intuit.karate - [print] CA3 ✔ | PUT /pet | ID: 977303226 | Nombre: FirulaisActualizado | Estatus: sold 
+01:33:04 INFO  com.intuit.karate - [print] CA4 | Buscando petId 977303226 en GET /pet/findByStatus?status=sold via Streaming 
+01:33:28 INFO  com.intuit.karate - [print] ══════════════════════════════════════════════════════ 
+01:33:28 INFO  com.intuit.karate - [print] CA4 ✔ | La mascota modificada fue encontrada por estatus 
+01:33:28 INFO  com.intuit.karate - [print] Endpoint : https://petstore.swagger.io/v2/pet/findByStatus?status=sold 
+01:33:28 INFO  com.intuit.karate - [print] HTTP     : 200 
+01:33:28 INFO  com.intuit.karate - [print] ID       : 977303226 
+01:33:28 INFO  com.intuit.karate - [print] Nombre   : FirulaisActualizado 
+01:33:28 INFO  com.intuit.karate - [print] Estatus  : sold 
+01:33:28 INFO  com.intuit.karate - [print] Técnica  : Jackson Streaming API — O(1) heap: solo el objeto buscado se materializa, el resto del stream se descarta 
+01:33:28 INFO  com.intuit.karate - [print] ══════════════════════════════════════════════════════ 
+01:33:51 INFO  com.intuit.karate - [print] CA5 ✔ | E2E | ID: 952363592 | Nombre: FirulaisActualizado | Estatus: sold 
+---------------------------------------------------------
+feature: src/test/java/com/template/features/petstore/petstore.feature
+scenarios:  5 | passed:  5 | failed:  0 | time: 49,9631
+---------------------------------------------------------
+
+01:33:54 INFO  c.i.karate.Suite - <<pass>> feature 2 of 2 (0 remaining) src/test/java/com/template/features/petstore/petstore.feature
+Karate version: 1.3.0
+======================================================
+elapsed:  59,56 | threads:    1 | thread time: 49,96 
+features:     1 | skipped:    1 | efficiency: 0,84
+scenarios:    5 | passed:     5 | failed: 0
+======================================================
+
+HTML report: (paste into browser to view) | Karate version: 1.3.0
+file:///C:/Users/allumiqu/Downloads/api_AndresLlumiquinga/build/karate-reports/karate-summary.html
+===================================================================
+
+]]></system-out>
+  <system-err><![CDATA[mar. 18, 2026 1:33:04 A. M. com.template.helpers.PetStoreSoldHelper findPetByIdInSoldStream
+INFORMACIÓN: CA4 - Buscando petId=977.303.226 en https://petstore.swagger.io/v2/pet/findByStatus?status=sold
+mar. 18, 2026 1:33:28 A. M. com.template.helpers.PetStoreSoldHelper streamSearchById
+INFORMACIÓN: CA4 - Pet encontrado en posición #210: id=977.303.226, status=sold
+mar. 18, 2026 1:33:29 A. M. com.template.helpers.PetStoreSoldHelper findPetByIdInSoldStream
+INFORMACIÓN: CA4 - Buscando petId=952.363.592 en https://petstore.swagger.io/v2/pet/findByStatus?status=sold
+mar. 18, 2026 1:33:51 A. M. com.template.helpers.PetStoreSoldHelper streamSearchById
+INFORMACIÓN: CA4 - Pet encontrado en posición #211: id=952.363.592, status=sold
+mar. 18, 2026 1:33:55 A. M. net.masterthought.cucumber.ReportParser parseJsonFiles
+INFORMACIÓN: File 'C:\Users\allumiqu\Downloads\api_AndresLlumiquinga\build\karate-reports\json\karate.json' contains 2 features
+mar. 18, 2026 1:33:55 A. M. net.masterthought.cucumber.ReportParser parseJsonFiles
+INFORMACIÓN: File 'C:\Users\allumiqu\Downloads\api_AndresLlumiquinga\build\karate-reports\src.test.java.com.template.features.petstore.petstore.json' contains 1 features
+]]></system-err>
+</testsuite>

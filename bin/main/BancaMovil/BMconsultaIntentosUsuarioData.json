@@ -1,0 +1,23 @@
+{
+  "footmark": {
+    "brand": "Redmi",
+    "carrier": "Claro",
+    "deviceId": "lancelot",
+    "epoch": "1622126389722",
+    "ipIspAddress": "200.63.104.90",
+    "latitude": "0",
+    "longitude": "0",
+    "macAddress": "64:A2:00:9E:A3:BA",
+    "messageHeader": "n/a",
+    "model": "M2004J19C",
+    "providerId": null,
+    "readableVersion": "6.8.10.126",
+    "systemName": "Android",
+    "systemVersion": "10",
+    "timeZone": "America/Guayaquil",
+    "uniqueId": "ca1cf9574ca5622a",
+    "version": "6.8.10"
+  },
+  "identification": "20N6zQM1kiq98KMCACIuJw==",
+  "identificationType": "CEDULA"
+}

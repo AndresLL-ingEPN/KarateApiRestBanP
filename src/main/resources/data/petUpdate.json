@@ -1,0 +1,9 @@
+{
+  "id": 0,
+  "category":  { "id": 1, "name": "Perros" },
+  "name":      "FirulaisActualizado",
+  "photoUrls": ["https://example.com/photos/firulais-updated.jpg"],
+  "tags":      [{ "id": 1, "name": "jugueton" }],
+  "status":    "sold"
+}
+

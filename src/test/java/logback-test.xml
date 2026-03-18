@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- Consola: solo para ejecución local/IDE -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss} %-5level %logger{20} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Archivo: evidencia persistente en build/karate-reports/karate.log -->
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>build/karate-reports/karate.log</file>
+        <encoder>
+            <pattern>%d{HH:mm:ss} %-5level %logger{20} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- INFO muestra: escenarios, pasos, prints, match errors — sin el ruido HTTP interno de DEBUG -->
+    <logger name="com.intuit.karate" level="INFO"/>
+
+    <!-- Silenciar librerías externas que no aportan valor al reporte -->
+    <logger name="org.apache"              level="WARN"/>
+    <logger name="org.springframework"     level="WARN"/>
+    <logger name="net.masterthought"       level="WARN"/>
+
+    <root level="WARN">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="FILE"/>
+    </root>
+
+</configuration>

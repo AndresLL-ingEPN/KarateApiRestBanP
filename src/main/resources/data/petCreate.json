@@ -1,0 +1,19 @@
+{
+  "id": 9981234567,
+  "category": {
+    "id": 1,
+    "name": "Perros"
+  },
+  "name": "Firulais",
+  "photoUrls": [
+    "https://example.com/photos/firulais.jpg"
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "jugueton"
+    }
+  ],
+  "status": "available"
+}
+

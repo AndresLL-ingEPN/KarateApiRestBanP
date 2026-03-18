@@ -1,0 +1,33 @@
+{
+  "ConsultarContactoTransaccional01": {
+    "headerIn": {
+      "dispositivo": "01010101010101010101010101010101010101010101",
+      "empresa": "0010",
+      "canal": "02",
+      "medio": "030006",
+      "aplicacion": "00663",
+      "agencia": "0012",
+      "tipoTransaccion": "201000701",
+      "geolocalizacion": "",
+      "usuario": "USINTERT",
+      "unicidad": "",
+      "guid": "3F2504E04F8911D39A0C0305E82C3312",
+      "fechaHora": "201902281459012548",
+      "filler": "",
+      "idioma": "es-EC",
+      "sesion": "zxxxxxxssss",
+      "ip": "10.0.94.183",
+      "idCliente": "1700381799",
+      "tipoIdCliente": "001"
+    },
+    "bodyIn": {
+      "ordenante": {
+        "identificacion": "1700381799",
+        "tipoIdentificacion": "0001"
+      },
+      "transaccion": {
+        "tipoTransaccion": "1700381799"
+      }
+    }
+  }
+}

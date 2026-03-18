@@ -1,0 +1,38 @@
+01:28:12 WARN  c.i.karate.Suite - failed to backup existing dir: build\karate-reports
+01:28:13 INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:com/template/features/petstore/helpers/addPet.feature')
+01:28:15 INFO  com.intuit.karate - [print] Helper addPet - Mascota creada con ID: 982370138 
+01:28:15 INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:com/template/features/petstore/helpers/addPet.feature')
+01:28:15 INFO  com.intuit.karate - [print] CA1 ✔ | POST /pet | ID: 982370138 | Nombre: Firulais | Estatus: available 
+01:28:15 INFO  com.intuit.karate - [print] CA2 ✔ | GET /pet/{id} | ID: 982370138 | Nombre: Firulais | Estatus: available 
+01:28:15 INFO  com.intuit.karate - [print] CA3 ✔ | PUT /pet | ID: 982370138 | Nombre: FirulaisActualizado | Estatus: sold 
+01:28:16 INFO  com.intuit.karate - [print] CA4 | Buscando petId 982370138 en GET /pet/findByStatus?status=sold via Streaming 
+01:28:34 INFO  com.intuit.karate - [print] ══════════════════════════════════════════════════════ 
+01:28:34 INFO  com.intuit.karate - [print] CA4 ✔ | La mascota modificada fue encontrada por estatus 
+01:28:34 INFO  com.intuit.karate - [print] Endpoint : https://petstore.swagger.io/v2/pet/findByStatus?status=sold 
+01:28:34 INFO  com.intuit.karate - [print] HTTP     : 200 
+01:28:34 INFO  com.intuit.karate - [print] ID       : 982370138 
+01:28:34 INFO  com.intuit.karate - [print] Nombre   : FirulaisActualizado 
+01:28:34 INFO  com.intuit.karate - [print] Estatus  : sold 
+01:28:34 INFO  com.intuit.karate - [print] Técnica  : Jackson Streaming API — O(1) heap: solo el objeto buscado se materializa, el resto del stream se descarta 
+01:28:34 INFO  com.intuit.karate - [print] ══════════════════════════════════════════════════════ 
+01:31:13 INFO  com.intuit.karate - [print] CA5 ✔ | E2E | ID: 976468003 | Nombre: FirulaisActualizado | Estatus: sold 
+01:31:16 INFO  c.i.karate.Suite - <<pass>> feature 2 of 2 (0 remaining) src/test/java/com/template/features/petstore/petstore.feature
+01:32:56 WARN  c.i.karate.Suite - failed to backup existing dir: build\karate-reports
+01:33:01 INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:com/template/features/petstore/helpers/addPet.feature')
+01:33:03 INFO  com.intuit.karate - [print] Helper addPet - Mascota creada con ID: 977303226 
+01:33:03 INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:com/template/features/petstore/helpers/addPet.feature')
+01:33:03 INFO  com.intuit.karate - [print] CA1 ✔ | POST /pet | ID: 977303226 | Nombre: Firulais | Estatus: available 
+01:33:03 INFO  com.intuit.karate - [print] CA2 ✔ | GET /pet/{id} | ID: 977303226 | Nombre: Firulais | Estatus: available 
+01:33:04 INFO  com.intuit.karate - [print] CA3 ✔ | PUT /pet | ID: 977303226 | Nombre: FirulaisActualizado | Estatus: sold 
+01:33:04 INFO  com.intuit.karate - [print] CA4 | Buscando petId 977303226 en GET /pet/findByStatus?status=sold via Streaming 
+01:33:28 INFO  com.intuit.karate - [print] ══════════════════════════════════════════════════════ 
+01:33:28 INFO  com.intuit.karate - [print] CA4 ✔ | La mascota modificada fue encontrada por estatus 
+01:33:28 INFO  com.intuit.karate - [print] Endpoint : https://petstore.swagger.io/v2/pet/findByStatus?status=sold 
+01:33:28 INFO  com.intuit.karate - [print] HTTP     : 200 
+01:33:28 INFO  com.intuit.karate - [print] ID       : 977303226 
+01:33:28 INFO  com.intuit.karate - [print] Nombre   : FirulaisActualizado 
+01:33:28 INFO  com.intuit.karate - [print] Estatus  : sold 
+01:33:28 INFO  com.intuit.karate - [print] Técnica  : Jackson Streaming API — O(1) heap: solo el objeto buscado se materializa, el resto del stream se descarta 
+01:33:28 INFO  com.intuit.karate - [print] ══════════════════════════════════════════════════════ 
+01:33:51 INFO  com.intuit.karate - [print] CA5 ✔ | E2E | ID: 952363592 | Nombre: FirulaisActualizado | Estatus: sold 
+01:33:54 INFO  c.i.karate.Suite - <<pass>> feature 2 of 2 (0 remaining) src/test/java/com/template/features/petstore/petstore.feature
