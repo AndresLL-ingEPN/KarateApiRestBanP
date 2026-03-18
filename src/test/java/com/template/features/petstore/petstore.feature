@@ -1,4 +1,4 @@
-@REQ_EVA-TCS @APIPetstore
+@REQ_EVA-BP @APIPetstore
 Feature: Gestión de Mascotas - Petstore API
 
   # Flujo E2E sobre UN ÚNICO pet compartido entre los 4 casos:
@@ -96,53 +96,3 @@ Feature: Gestión de Mascotas - Petstore API
     * print 'Estatus  :', foundPet.status
     * print 'Técnica  :', foundPet.strategy
     * print '══════════════════════════════════════════════════════'
-
-
-  # ─────────────────────────────────────────────────────────────────────────────
-  @id:5 @FluentE2E @APIPetstore
-  Scenario: T-API-PS-CA5 - Flujo E2E completo: crear, consultar, actualizar y verificar por estatus
-
-    # ── GIVEN: La mascota es creada (POST) y confirmada por ID (GET) ──────────
-    Given def petBody  = read('classpath:data/petCreate.json')
-    And   def uniqueId = 900000000 + Math.floor(Math.random() * 99999999)
-    And   set petBody.id = uniqueId
-    And   url baseUrlPetstore + '/pet'
-    And   request petBody
-    And   method POST
-    And   status 200
-    And   def e2ePetId = response.id
-    And   match response.id     == '#number'
-    And   match response.status == 'available'
-    And   url baseUrlPetstore + '/pet/' + e2ePetId
-    And   method GET
-    And   status 200
-    And   match response.id == e2ePetId
-
-    # ── WHEN: Se actualiza el nombre y el estatus a "sold" (PUT) ──────────────
-    When  def updateBody =
-          """
-          {
-            "id": #(e2ePetId),
-            "category":  { "id": 1, "name": "Perros" },
-            "name":      "FirulaisActualizado",
-            "photoUrls": ["https://example.com/photos/firulais.jpg"],
-            "tags":      [{ "id": 1, "name": "jugueton" }],
-            "status":    "sold"
-          }
-          """
-    And   url baseUrlPetstore + '/pet'
-    And   request updateBody
-    And   method PUT
-    And   status 200
-    And   match response.id     == e2ePetId
-    And   match response.name   == 'FirulaisActualizado'
-    And   match response.status == 'sold'
-
-    # ── THEN: La mascota modificada aparece al filtrar por estatus (Streaming) ─
-    Then  def PetStoreSoldHelper = Java.type('com.template.helpers.PetStoreSoldHelper')
-    And   def foundPet = PetStoreSoldHelper.findPetByIdInSoldStream(e2ePetId)
-    And   match foundPet.id     == e2ePetId
-    And   match foundPet.name   == 'FirulaisActualizado'
-    And   match foundPet.status == 'sold'
-    And   print 'CA5 ✔ | E2E | ID:', e2ePetId, '| Nombre:', foundPet.name, '| Estatus:', foundPet.status
-
